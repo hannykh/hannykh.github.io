@@ -76,3 +76,13 @@ desc {
   max-width: 100%;
   float: left;
 }
+
+.article {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 20px 0;
+  border: 1px solid #e885d9;
+  box-shadow: #a74e7f 0px 4px 12px rgba(206, 175, 175, 0.1);
+  background-color: #f189b3;
+}
