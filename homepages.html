@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="Kh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roem Hanny | Software Developer, Volunteer & Women in Tech Advocate</title>
+  <meta name="description" content="Portfolio of Roem Hanny, a Cambodian software developer, volunteer, and advocate for women in coding. Showcasing projects, community work, and tech empowerment initiatives.">
+  <meta name="keywords" content="Cambodian, Personal portfolio website, Women, Hanny, Portfolio, Web Development, Creative Coding,Women in Coding, Community Tech Projects, Volunteer in Technology">
+  <meta name="author" content="Hanny Roem">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Roem Hanny | Software Developer, Volunteer & Women in Tech Advocate">
+  <meta property="og:description" content="Portfolio of Roem Hanny, a Cambodian software developer, volunteer, and advocate for women in coding. Showcasing projects, community work, and tech empowerment initiatives.">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+   <!-- Add this in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Navbar style */
+    nav.navbar {
+      background-color: #8b0000;
+    }
+    nav.navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    nav.navbar a:hover {
+      color: #ffd6d6 !important;
+      text-decoration: underline;
+    }
+    /* Mobile menu */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #8b0000;
+        padding-top: 4rem;
+        z-index: 1050;
+        transition: right 0.4s ease-in-out;
+      }
+      .navbar-collapse.show {
+        right: 0;
+      }
+      .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .nav-link {
+        display: block;
+        text-align: center;
+        padding: 0.8rem;
+      }
+      .close-menu-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .close-menu-btn:hover {
+        color: #ffd6d6;
+      }
+    }
+
+
+
+/* Slight color shimmer by animating color after fade */
+.animated-title span:nth-child(even) {
+  animation-delay: calc(0.1s * var(--i));
+  animation-name: fadeUp, shimmer;
+  animation-duration: 0.35s, 1.5s;
+  animation-fill-mode: forwards, infinite;
+  animation-timing-function: ease-in-out, linear;
+  animation-delay: calc(0.1s * var(--i)), 0s;
+}
+
+@keyframes shimmer {
+  0%, 100% { color: #8b0000; }
+  50% { color: #d4a017; }
+}
+
+
+    /* Portfolio section */
+    .container.py-5 {
+      background-color: #d4a017; /* light background for contrast */
+    
+      color: #222;
+    }
+    h1.text-center {
+      color: #d4a017;
+      margin-bottom: 1.5rem;
+    }
+    /* Filter buttons */
+    .btn-outline-light {
+      color: #8b0000;
+      border-color: #8b0000;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-light:hover,
+    .btn-outline-light.active {
+      color: #fff;
+      background-color: #8b0000;
+      border-color: #8b0000;
+    }
+    /* Cards */
+    .card-title {
+      color: #8b0000;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-text {
+      color: #1e1c1c;
+    }
+    .card-footer .btn {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* Modal buttons */
+    .modal-footer .btn-outline-light {
+      color: #8b0000;
+      border-color: #8b0000;
+    }
+    .modal-footer .btn-outline-light:hover {
+      background-color: #ffd700; /* gold color for highlight */
+      color: #fff;
+      border-color: #8b0000;
+    }
+
+    /*section hero homepage*/
+
+      /* Animated gradient background */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-header-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    background: linear-gradient(-45deg, #8b0000, #d4a017, #b22222, #ffcc33);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: white;
+  }
+
+  .hero-section {
+    background: linear-gradient(-45deg, #8b0000, #ff4d4d, #d4a017, #ffcc33);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
+    padding: 100px 0;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Button style */
+  .btn-outline-light {
+    border-color: white;
+    color: #8b0000;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #ffd700;
+    color: #8b0000;
+    border-color: #ffd700;
+  }
+
+  .bg-brand {
+  background-color: #8b0000;
+}
+
+.skill-box {
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.skill-box:hover {
+  transform: translateY(-8px);
+  background: #f8f9fa;
+}
+
+
+.fixed-img {
+  height: 500px; /* Same height for all blog images */
+  object-fit: cover; /* Crop without distortion */
+  width: 100%;
+}
+
+
+  .skill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    font-size: 2rem;
+  }
+
+  .skill-box:hover .skill-icon {
+    transform: scale(1.1);
+    background-color: #d4a017;
+    color: #fff;
+  }
+
+  .skill-box p {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <img
+          src="images/women.png"
+          alt="Logo"
+          width="90"
+          height="90"
+          class="d-inline-block align-text-top me-2"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button
+          class="close-menu-btn d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          &times;
+        </button>
+
+        <ul class="navbar-nav ms-auto d-lg-flex align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="homepages.html">HOME PAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about-me.html">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+    <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Showcasing Creativity & Code</h1>
+      <p class="lead mb-4">From innovative designs to powerful web solutions — welcome to my world.</p>
+      <a href="portfolio.html" class="btn btn-light btn-lg me-2">View My Work</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- Modal 1 -->
+  <div
+    class="modal fade"
+    id="modal1"
+    tabindex="-1"
+    aria-labelledby="modal1Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal1Label">Python Quiz App</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Developed a Python-based quiz app to teach coding basics to
+            Cambodian university students. Used Pyodide for browser compatibility
+            and included Khmer language support.
+          </p>
+          <img
+            src="https://via.placeholder.com/400x300?text=Python+Quiz+Detail"
+            class="img-fluid my-3"
+            alt="Python Quiz Detail"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div
+    class="modal fade"
+    id="modal2"
+    tabindex="-1"
+    aria-labelledby="modal2Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">
+            Cambodia University Slides
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Presented a tech education overview at a Cambodian university,
+            focusing on Python applications in education. Included interactive
+            slides with Khmer annotations.
+          </p>
+          <img
+            src="https://via.placeholder.com/400x300?text=Presentation+Detail"
+            class="img-fluid my-3"
+            alt="Presentation Detail"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div
+    class="modal fade"
+    id="modal3"
+    tabindex="-1"
+    aria-labelledby="modal3Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">អក្សរខ្មែរ App</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            A 2021 project creating a mobile app to teach Khmer script using
+            digital content. Integrated traditional Apsara motifs for an
+            authentic cultural experience.
+          </p>
+          <img
+            src="https://via.placeholder.com/400x300?text=Khmer+Art+Detail"
+            class="img-fluid my-3"
+            alt="Khmer Art Detail"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Skills & Tools -->
+
+
+
+<section class="py-5">
+  <div class="container-fluid">
+    <h2 class="text-center mb-5" style="color: #d4a017;">Skills & Tools</h2>
+    <div class="row text-center g-4">
+      
+      <div class="col-md-3">
+        <div class="skill-box p-4 shadow rounded">
+          <div class="skill-icon" style="color: #e34f26;">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <p>HTML</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-box p-4 shadow rounded">
+          <div class="skill-icon" style="color: #264de4;">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <p>CSS</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-box p-4 shadow rounded">
+          <div class="skill-icon" style="color: #7952b3;">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+          <p>Bootstrap</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-box p-4 shadow rounded">
+          <div class="skill-icon" style="color: #28a745;">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <p>UI Design</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="skill-box p-4 shadow rounded">
+          <div class="skill-icon" style="color: #f7df1e;">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <p>JavaScript</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimonials / Quote -->
+  <section class="py-5 bg-brand text-white text-center">
+    <div class="container-fluid  text-center">
+      <blockquote class="blockquote">
+        <p class="mb-4">"Creativity is intelligence having fun." — Albert Einstein</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Latest Blog -->
+<section class="py-5">
+  <div class="container-fluid">
+    <h2 class="text-center text-brand mb-5" style="color: #d4a017;">Latest Blog Posts</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="images/2h.png" class="card-img-top fixed-img" alt="Blog Post 1">
+          <div class="card-body">
+            <h5 class="card-title">MC in RUA</h5>
+            <p class="card-text">It is workshop about young people with high education and mental Health.</p>
+            <a href="blog.html" class="btn btn-outline-danger">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="images/sister.jpg" class="card-img-top fixed-img" alt="Blog Post 2">
+          <div class="card-body">
+            <h5 class="card-title">A Day in Sister of Code</h5>
+            <p class="card-text">Volunteers for organising 2 very important events today: Day of AI in Education in the morning and Sisters of Code 5th Anniversary in the afternoon.</p>
+            <a href="blog.html" class="btn btn-outline-danger">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Contact Call-to-Action -->
+  <section class="py-5 bg-brand text-white text-center">
+    <div class="container-fluid">
+      <h2>Let's Collaborate!</h2>
+      <p class="mb-4">Have a project in mind? I’d love to hear from you.</p>
+      <a href="contact.html" class="btn btn-light btn-lg">Contact Me</a>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="bg-brand text-light pt-5 pb-3 mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Logo & Description -->
+        <div class="col-md-4 mb-4">
+          <img src="images/women.png" alt="Logo" width="80" height="80" class="mb-3">
+          <p>
+            Welcome to Hanny Portfolio — showcasing my creative projects,
+            coding works, and cultural contributions. 
+            Explore, learn, and get inspired.
+          </p>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase mb-3">Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="homepages.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="about-me.html" class="text-light text-decoration-none">About Me</a></li>
+            <li><a href="portfolio.html" class="text-light text-decoration-none">Portfolio</a></li>
+            <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Policy -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase mb-3">Contact</h5>
+          <p class="mb-1"><strong>Email:</strong> kongchak@example.com</p>
+          <p class="mb-1"><strong>Phone:</strong> +855 12 345 678</p>
+          <p class="mb-3"><strong>Address:</strong> Phnom Penh, Cambodia</p>
+          <a href="policy.html" class="text-light text-decoration-none">Privacy Policy</a>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <div class="text-center">
+        <small>&copy; 2025 Hanny Portfolio. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Portfolio filter script -->
+  <script>
+    document.querySelectorAll('.btn-outline-light[data-filter]').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        document.querySelectorAll('#portfolio-grid .col').forEach(col => {
+          col.style.display =
+            filter === 'all' || col.getAttribute('data-category') === filter
+              ? 'block'
+              : 'none';
+        });
+        document.querySelectorAll('.btn-outline-light').forEach(btn =>
+          btn.classList.remove('active')
+        );
+        button.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

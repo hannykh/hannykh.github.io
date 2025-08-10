@@ -21,7 +21,7 @@
         </button>
 
         <ul class="navbar-nav ms-auto d-lg-flex align-items-lg-center">
-                  <!-- Home -->
+                 <!-- Home -->
 <li class="nav-item">
   <a class="nav-link" href="homepages.html">HOME PAGE</a>
 </li>
@@ -49,12 +49,6 @@
   <!-- Bootstrap CSS & JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
 
   <style>
   /* Link colors on red background: white text */
@@ -122,145 +116,127 @@
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
     }
   }
-  /* About Me Page Styles */
-    body {
-      background-color: #f8f9fa;
-      font-family: " sans-serif";
-      color: #333;
-    }
 
-    .about-container {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-title {
-      color: #8b0000;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .profile-img {
-      max-width: 250px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(212, 160, 23, 0.5);
-    }
-
-    .bio {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-
-    .skills-list {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 2rem;
-    }
-
-    .skills-list li {
-      background-color: #d4a017;
-      color: #8b0000;
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      margin: 0.3rem 0.5rem 0.3rem 0;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .contact-info {
-      margin-top: 1rem;
-    }
-
-    .contact-info h5 {
-      color: #8b0000;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .contact-info p,
-    .contact-info a {
-      color: #555;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      color: #d4a017;
-      text-decoration: underline;
-    }
-
-    .contact-info i {
-      margin-right: 0.8rem;
-      color: #d4a017;
-      min-width: 20px;
-      text-align: center;
-    }
-
-    .social-links a {
-      font-size: 1.6rem;
-      margin-right: 1.2rem;
-      color: #8b0000;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #d4a017;
-    }
-    .bg-brand {
+  .bg-brand {
   background-color: #8b0000;
 }
 
+    body {
+      background-color: #f8f9fa;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .blog-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #8b0000;
+      font-weight: 700;
+    }
+
+    .card-title {
+      color: #8b0000;
+      font-weight: 700;
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    .btn-readmore {
+      background-color: #8b0000;
+      border-color: #8b0000;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-readmore:hover {
+      background-color: #d4a017;
+      border-color: #d4a017;
+      color: #8b0000;
+    }
   </style>
 </head>
 <body>
-  <div class="about-container shadow-sm">
-    <h1 class="about-title">About Me</h1>
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <img
-          src="images/2h.png"
-          alt="My Photo"
-          class="profile-img img-fluid"
-        />
+
+  <div class="blog-container">
+    <h1 class="blog-header">Latest Blog Posts</h1>
+
+    <div class="row g-4">
+      <!-- Blog Post 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="images/ttic.jpg"
+            class="card-img-top"
+            alt="Blog Post 1"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Understanding 21st Century Skills</h5>
+            <p class="card-text flex-grow-1">
+              Explore the key skills needed to succeed in today’s world, including critical thinking, creativity, and communication.
+            </p>
+            <a href="https://web.facebook.com/share/p/16A3iqDNwY/" class="btn btn-readmore mt-auto align-self-start">Read More</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-8">
-        <p class="bio">
-          Hello! I am Hanny, a passionate developer and educator based in Phnom Penh, Cambodia. I specialize in web development and creative digital content. I love combining technology with culture to build meaningful projects that empower my community.
-        </p>
 
-        <h5>Skills</h5>
-        <ul class="skills-list">
-          <li>HTML & CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Data Science</li>
-          <li>Bootstrap</li>
-          <li>Creative Coding</li>
-        </ul>
+      <!-- Blog Post 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="images/ttic.jpg"
+            class="card-img-top"
+            alt="Blog Post 2"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Self-Love and Mental Health</h5>
+            <p class="card-text flex-grow-1">
+              Learn how practicing self-love can improve your emotional well-being and resilience in daily life.
+            </p>
+            <a href="https://web.facebook.com/share/p/14Hq5w6idhF/" class="btn btn-readmore mt-auto align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
 
-        <div class="contact-info">
-          <h5>Contact Info</h5>
-          <p><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</p>
-          <p><i class="fas fa-phone"></i> <a href="tel:+85512345678">+855 71 93 83 375</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:info@kongchak.com">roemhanny2@gmail.com</a></p>
+      <!-- Blog Post 3 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="images/sister.jpg"
+            class="card-img-top"
+            alt="Blog Post 3"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Technology in Education</h5>
+            <p class="card-text flex-grow-1">
+              Discover how modern technology tools are transforming teaching and learning experiences worldwide.
+            </p>
+            <a href="blog-post-3.html" class="btn btn-readmore mt-auto align-self-start">Read More</a>
+          </div>
+        </div>
+      </div>
 
-          <h5>Follow Me</h5>
-          <div class="social-links">
-            <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <!-- Blog Post 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="images/sister.jpg"
+            class="card-img-top"
+            alt="Blog Post 4"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Khmer Culture in Digital Era</h5>
+            <p class="card-text flex-grow-1">
+              Explore how Khmer traditions and arts are preserved and shared through digital platforms today.
+            </p>
+            <a href="blog-post-4.html" class="btn btn-readmore mt-auto align-self-start">Read More</a>
           </div>
         </div>
       </div>
@@ -304,7 +280,7 @@
 
       <hr class="border-light">
       <div class="text-center">
-        <small>&copy; 2025 Hanny Portfolio. All rights reserved.</small>
+        <small>&copy; 2025 KONGCHAK Portfolio. All rights reserved.</small>
       </div>
     </div>
   </footer>
@@ -315,4 +291,4 @@
 </body>
 </html>
 
- 
+
